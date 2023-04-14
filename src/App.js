@@ -1,13 +1,15 @@
 import React from "react";
-import { 
+import {
   createBrowserRouter,
-  RouterProvider
- } from "react-router-dom";
+  RouterProvider,
+} from "react-router-dom";
 
-import { Root, ErrorPage, Detail, Home } from "./routes/index";
+import { Root, ErrorPage, Detail } from "./routes/index";
 
 
- const router = createBrowserRouter([
+
+
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
@@ -16,14 +18,10 @@ import { Root, ErrorPage, Detail, Home } from "./routes/index";
       {
         path: "product/:productId",
         element: <Detail />
-      },
-      {
-        path: "home",
-        element: <Home />
       }
     ]
   }
- ])
+])
 
 function App() {
   return (

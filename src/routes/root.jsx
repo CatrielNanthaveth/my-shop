@@ -1,13 +1,16 @@
 import React from 'react'
 import { Header } from '../components'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
+import { Home } from './home'
+import "./root.css";
 
 export const Root = () => {
+
   return (
     <div>
         <Header />
-        <div>
-            <Outlet />
+        <div id='main-container'>
+            {useLocation().pathname === "/"? <Home /> : <Outlet />}
         </div>
     </div>
   )

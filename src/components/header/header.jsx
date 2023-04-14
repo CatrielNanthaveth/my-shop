@@ -13,7 +13,7 @@ export const Header = () => {
     let headerList = [
         {
             name: "Inicio",
-            link: "/home"
+            link: "/"
         }, {
             name: "Mis compras",
             link: "/my_purcharses"
@@ -42,7 +42,7 @@ export const Header = () => {
             <ul id='headerList'>
                 {headerList.map((item) => {
                     return (
-                        <li><Link to={item.link}>{item.name}</Link></li>
+                        <li key={item.name} id='nav-link'><Link to={item.link}>{item.name}</Link></li>
                     )
                 })}
             </ul>
