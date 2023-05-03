@@ -1,0 +1,36 @@
+#products-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.img-product {
+    width: 40vw;
+    height: 20vh;
+    object-fit: scale-down;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:any-link {
+    color: cadetblue;
+}
+
+@media screen and (min-width: 1024px) {
+    .img-product {
+        width: 40vw;
+        height: 50vh;
+        object-fit: scale-down;
+    }
+}
